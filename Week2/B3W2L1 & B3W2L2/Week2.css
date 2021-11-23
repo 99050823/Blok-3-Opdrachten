@@ -1,0 +1,53 @@
+body {
+    background-color: chocolate ;
+    overflow-x: hidden;
+}
+
+.panel {
+    background-color: gray;
+    margin: 2cm 10cm 0 10cm;
+    padding: 1cm 0 2cm 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.panel form input {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 100px;
+}
+
+.panel form .name{
+    position: absolute;
+    top: 3.05cm;
+    left: 17cm;
+}
+
+.panel form .email{
+    position: absolute;
+    top: 3.8cm;
+    left: 17cm;
+}
+
+.panel H2{
+    text-align: center;
+    position: relative;
+    bottom: 1cm;
+}
+
+.panel hr {
+    position: relative;
+    bottom: 1cm;
+}
+
+.nameElement {
+    position: relative;
+    bottom: 3.5cm;
+    left: 17cm;
+}
+
+.mailElement {
+    position: relative;
+    bottom: 3.7cm;
+    left: 17cm;
+}

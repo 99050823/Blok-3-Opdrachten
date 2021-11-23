@@ -1,0 +1,39 @@
+body {
+    background-color: gray;
+}
+
+form {
+    background-color: white;
+    margin: 2cm 10cm 0 10cm;
+    padding: 1cm 0 2cm 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.name {
+    position: relative;
+    left: 12cm;
+    bottom: 2.4cm;
+}
+
+.mail {
+    position: relative;
+    left: 12cm;
+    bottom: 2.8cm;
+}
+
+#empty1 {
+    position: absolute;
+    bottom: 275px;
+    left: 575px;
+    color: red;
+    display: none;
+}
+
+#empty2 {
+    position: absolute;
+    bottom: 275px;
+    left: 730px;
+    color: red;
+    display: none;
+}

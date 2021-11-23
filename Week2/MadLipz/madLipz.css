@@ -1,0 +1,84 @@
+body {
+    background-color: gray;
+}
+
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns:400px 400px;
+    width: 800px;
+    margin: 2cm 0 0 11.5cm;
+    padding-bottom: 10px;
+}
+
+.nav {
+    background-color: red;
+    grid-column: 1/3;
+}
+
+.nav p a {
+    color: white;
+}
+
+.nav p {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+h2 {
+    display: inline-block;
+    margin-left: 12cm;
+    color: white;
+}
+
+.tekstContainer {
+    grid-column: 1/2;
+    margin-left: 3cm;
+}
+
+.inputContainer {
+    width: 200px;
+    position: relative;
+    left: 75px;
+    margin-top: 6px;
+}
+
+.inputContainer form input{
+    margin-top: 12px;
+}
+
+.inputContainer2 {
+    width: 200px;
+    position: relative;
+    left: 75px;
+    margin-top: 2px;
+}
+
+.inputContainer2 form input{
+    margin-top: 19px;
+}
+
+#output {
+    left: 5cm;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+span {
+    background-color: black;
+    color: yellow;
+}
+
+.footer {
+    text-align: center;
+    background-color: red;
+    width: 800px;
+    position: relative;
+    left: 11.5cm;
+    color: white;
+    padding-top: 0.3cm;
+    padding-bottom: 0.3cm;
+}
+
+

@@ -1,0 +1,15 @@
+#pageIMG {
+    width: 500px;
+    height: 250px;
+}
+
+.txt {
+    margin-left: 13.5cm;
+    margin-right: 1cm;
+    position: relative;
+    bottom: 6.5cm;
+
+    padding: 0.5cm;
+
+    background-color: gray;
+}

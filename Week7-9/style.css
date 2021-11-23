@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: gray;
+}
+
+.gameList {
+    width: 25%;
+    background-color: rgba(23, 88, 6, 0.527);
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.gameList h3 {
+    text-align: center;
+}
+
+.gameList ul li {
+    margin-left: 40px;
+}
+
+.panelContainer {
+    text-align: center;
+    margin: 1.5cm 11.5cm 0 11.5cm;
+    background-color: rgba(23, 88, 6, 0.527);
+    width: 50%;
+}
+
+.contentContainer:hover {
+    background-color: cornflowerblue;
+}
+
+.contentContainer {
+    margin-left: 9cm;
+    margin-right: 9cm;
+    border-radius: 10px;
+}
+
+.displayContainer {
+    display: none;
+}
+
+header {
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: cornflowerblue;
+}
+
+#popUp {
+    display: none;
+    background-color: rgb(71, 135, 255);
+    margin: 20px 12cm 0 12cm;
+    text-align: center;
+}
+
+#popUp input[name=game], input[name=time] {
+    width: 500px;
+}
+
+#planButton {
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#planButton:hover {
+    background-color: rgba(23, 88, 6, 0.527);
+    color: cornflowerblue;
+}
+
+.exitBttn {
+    position: relative;
+    left: 9.8cm;
+    bottom: 5cm;
+}
+
+hr {
+    width: 500px;
+    margin-left: 175px;
+    margin-bottom: 30px;
+}
+
+#gamePopUp {
+    background-color: cornflowerblue;
+    display: none;
+    top: 25%;
+    left: 39%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width:600px;
+    height:200px;
+    position: fixed;
+}

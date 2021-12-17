@@ -1,43 +1,24 @@
-var buttonPopUp = document.getElementById("planButton");
-var popUpScreen = document.getElementById("popUp");
-var submitButton = document.getElementById("subBttn");
-var page = document.querySelector('body');
+var buttons = document.querySelectorAll("button");
+var form = document.querySelector("form");
+var list = document.querySelector(".navList").querySelectorAll("li");
+var games = document.querySelector(".gamesList");
 
-var contentPopUp = document.querySelectorAll("[id=gamePopUp]");
-var content = document.querySelectorAll('[name="content"]');
+buttons[0].onclick = planningScreen;
+list[0].onclick = gamesList;
+list[2].onclick = planningScreen;
 
-buttonPopUp.onclick = popUp;
-submitButton.onclick = submit;
-
-for (let i = 0; i < content.length; i++) {
-    content[i].addEventListener('click', () => {
-        
-        for (let j = 0; j < contentPopUp.length; j++) {
-            contentPopUp[j].style.display = "none";
-        }
-        contentPopUp[i].style.display = "block";
-    })
+function planningScreen () {
+    form.style.display = "inline";
+    buttons[0].style.display = "none";
+    games.style.display = "none";
 }
 
-if ( window.history.replaceState ) {
-    window.history.replaceState( null, null, window.location.href );
+function gamesList () {
+    buttons[0].style.display = "none";
+    form.style.display = "none";
+    games.style.display = "block";
 }
 
-function submit() {
-    window.location.reload();
-}
-
-function popUp() {
-
-    if  (popUpScreen.style.display = "none") {
-        popUpScreen.style.display = "block";
-    } 
-
-}
-
-function exitButton () {
-    if  (popUpScreen.style.display = "block") {
-        popUpScreen.style.display = "none";
-    } 
-}
-
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+})

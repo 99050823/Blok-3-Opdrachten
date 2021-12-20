@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -68,6 +68,10 @@
                     <li>Spyfall</li>
                     <li>The Estates</li>
                 </ul>
+            </div>
+
+            <div class="planned">
+                <h2>Planned Games</h2>
             </div>
         </section>
 

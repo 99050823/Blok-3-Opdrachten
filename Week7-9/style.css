@@ -62,3 +62,19 @@ input {
 .gamesList {
     display: none;
 }
+
+.gamesList ul {
+    list-style: none;
+}
+
+.planned {
+    display: none;
+}
+
+.planned h2 {
+    margin: 0 100px 0 100px;
+    background-color: wheat;
+    color: black;
+    position: relative;
+    bottom: 50px;
+}

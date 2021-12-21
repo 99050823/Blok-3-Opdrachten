@@ -1,5 +1,6 @@
 <!-- <!DOCTYPE html> -->
 <html lang="en">
+<?php require 'PHP/connect.php';?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +38,7 @@
                 <input name="pers2" type="text">
                 <br>
                 <br>
-                <button>Submit</button>
+                <input type="submit" value="Submit">
             </form>
 
             <div class="gamesList"> 

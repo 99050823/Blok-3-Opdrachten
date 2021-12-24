@@ -1,6 +1,7 @@
 <!-- <!DOCTYPE html> -->
 <html lang="en">
 <?php require 'PHP/connect.php';?>
+<?php require 'PHP/sendData.php';?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +23,7 @@
         <section>
             <button>Plan a game</button>
 
-            <form>
+            <form method="post">
                 <label for="game">Game : </label>
                 <input name="game" type="text">
                 <br>
@@ -38,7 +39,7 @@
                 <input name="pers2" type="text">
                 <br>
                 <br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" name="submit">
             </form>
 
             <div class="gamesList"> 
@@ -73,6 +74,38 @@
 
             <div class="planned">
                 <h2>Planned Games</h2>
+
+                <?php
+                
+                    echo "Work in Progress";
+
+                    // $sqlQuery2 = "SELECT * FROM planned";
+
+                    // if($result = mysqli_query($mysqli1, $sqlQuery2)) {
+                    //     if (mysqli_num_rows($result) > 0) {
+                    //         while($row = mysqli_fetch_array($result)) {
+
+                    //             echo "<div>
+                    //                 <h3>".$row['Name']."</h3>
+                    //                 <p>".$row['Time']."</p>
+                    //                 <p>".$row['Pers1']."</p>
+                    //                 <p>".$row['Pers2']."</p>
+                    //             </div>";
+
+                    //             echo "<br>";
+                    //         }
+                    //     } else { 
+                    //         echo "<script>
+                    //             console.log('No records found');
+                    //         </script>";
+                    //     }
+                    // } else {
+                    //     echo "<script>
+                    //         console.log('ERROR: Could not execute querry');
+                    //     </script>";
+                    // }
+                
+                ?>
             </div>
         </section>
 

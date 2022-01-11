@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -23,7 +26,7 @@
         <section>
             <button>Plan a game</button>
 
-            <form method="post">
+            <form class="planForm" method="post">
                 <label for="game">Game : </label>
                 <input name="game" type="text">
                 <br>
@@ -75,37 +78,7 @@
             <div class="planned">
                 <h2>Planned Games</h2>
 
-                <?php
-                
-                    echo "Work in Progress";
-
-                    // $sqlQuery2 = "SELECT * FROM planned";
-
-                    // if($result = mysqli_query($mysqli1, $sqlQuery2)) {
-                    //     if (mysqli_num_rows($result) > 0) {
-                    //         while($row = mysqli_fetch_array($result)) {
-
-                    //             echo "<div>
-                    //                 <h3>".$row['Name']."</h3>
-                    //                 <p>".$row['Time']."</p>
-                    //                 <p>".$row['Pers1']."</p>
-                    //                 <p>".$row['Pers2']."</p>
-                    //             </div>";
-
-                    //             echo "<br>";
-                    //         }
-                    //     } else { 
-                    //         echo "<script>
-                    //             console.log('No records found');
-                    //         </script>";
-                    //     }
-                    // } else {
-                    //     echo "<script>
-                    //         console.log('ERROR: Could not execute querry');
-                    //     </script>";
-                    // }
-                
-                ?>
+                <?php include "PHP/getData.php";?>
             </div>
         </section>
 

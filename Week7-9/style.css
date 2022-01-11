@@ -4,6 +4,8 @@ body {
     background-image: linear-gradient(to right ,rgb(0, 255, 200), rgb(98, 98, 248));
     margin: 0;
     padding: 0;
+
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .container {
@@ -27,7 +29,7 @@ h2 {
 
 .navList li{
     display: inline;
-    margin-right: 62px;
+    margin-right: 50px;
     margin-left: 80px;
 }
 
@@ -77,4 +79,22 @@ input {
     color: black;
     position: relative;
     bottom: 50px;
+}
+
+.plannedGame {
+    background-color: coral;
+    text-align: center;
+    margin-left: 5cm;
+    margin-right: 5cm;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.plannedGame button {
+    height: 30px;
+    width: 80px;
+}
+
+.plannedGame:hover {
+    background-color: white;
 }

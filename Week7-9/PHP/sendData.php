@@ -9,7 +9,7 @@
     
         $sqlQuery1 = "INSERT INTO planned (Name, Time, Pers1, Pers2) VALUES ('$name', '$time', '$pers1', '$pers2')";
     
-        if (mysqli_query($mysqli1, $sqlQuery1)) {
+        if (mysqli_query($conn, $sqlQuery1)) {
             echo "<script>
                 console.log('SUCCES');
             </script>";

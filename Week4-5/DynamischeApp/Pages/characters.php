@@ -6,7 +6,7 @@
     if ($row = mysqli_fetch_object($result2)) {
 
         echo "<header><h1>$row->name</h1>
-                <a class='backbutton' href='index.php'><i class='fas fa-long-arrow-alt-left'></i> Terug</a></header>
+            <a class='backbutton' href='index.php'><i class='fas fa-long-arrow-alt-left'></i> Terug</a></header>
             <div id='container'>
                 <div class='detail'>
                     <div class='left'>

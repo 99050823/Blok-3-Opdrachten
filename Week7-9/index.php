@@ -1,7 +1,6 @@
 <!-- <!DOCTYPE html> -->
 <html lang="en">
-<?php require 'PHP/connect.php';?>
-<?php require 'PHP/sendData.php';?>
+<?php $conn = mysqli_connect('localhost', 'admin', '', 'testing_games'); ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +77,36 @@
             <div class="planned">
                 <h2>Planned Games</h2>
 
-                <?php include "PHP/getData.php";?>
+                <?php 
+
+                    $sqlQuery1 = "SELECT * FROM planned";
+                    $result1 = mysqli_query($conn, $sqlQuery1);
+
+                    if(isset($_GET['pagina'])) {
+                        require "PHP/".$_GET['pagina'].".php";
+                    } else {
+
+                        if (!$conn) {
+                            echo "Connection failed: " . $conn->connect_error;
+                        } else {
+                            while($row = mysqli_fetch_array($result1)) {
+
+                                $name = $row['Name'];
+
+                                echo "<div class='plannedGame'>
+                                    <h3>".$row['Name']."</h3>
+                                    <p>".$row['Time']."</p>
+                                    <p>".$row['Pers1']."</p>
+                                    <p>".$row['Pers2']."</p>
+
+                                    <div class='viewLink'>test</div>
+                                </div>";
+
+                                echo "<br>";
+                            }
+                        }
+                    }
+                ?>
             </div>
         </section>
 

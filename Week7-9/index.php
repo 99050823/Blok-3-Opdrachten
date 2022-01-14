@@ -1,6 +1,7 @@
 <!-- <!DOCTYPE html> -->
 <html lang="en">
 <?php $conn = mysqli_connect('localhost', 'admin', '', 'testing_games'); ?>
+<?php include 'PHP/planGame.php'?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +28,16 @@
 
             <form class="planForm" method="post">
                 <label for="game">Game : </label>
-                <input name="game" type="text">
+                <select name="game">
+                    <?php
+                        $sqlQuery4 = "SELECT * FROM games";
+                        $result3 = mysqli_query($conn, $sqlQuery4);
+
+                        while ($row = mysqli_fetch_array($result3)) {
+                            echo "<option>".$row['name']."</option>";
+                        }
+                    ?>
+                </select>
                 <br>
                 <br>
                 <label for="time">Time : </label>
@@ -47,21 +57,21 @@
             <div class="gamesList"> 
                 <ul>
                     <li>7 Wonders</li>
-                    <li>10min Kraak</li>
+                    <li>10 minuten Kraak</li>
                     <li>Camel Up</li>
                     <li>City of Horror</li>
-                    <li>Climbers</li>
+                    <li>The Climbers</li>
                     <li>Codename Pictures</li>
                     <li>Concept</li>
                     <li>Counterfeiters</li>
                     <li>Dale of Merchants</li>
-                    <li>Dixit</li>
+                    <li>Dixit:Odyssey</li>
                     <li>Downforce</li>
                     <li>Dragon Flagon</li>
                     <li>Fantasy Realms</li>
                     <li>Ghost Fighting Treasure Hunters</li>
                     <li>Gizmos</li>
-                    <li>John</li>
+                    <li>Everyone is John</li>
                     <li>Keep Talking and Nobody Explodes</li>
                     <li>Lemming Maffias</li>
                     <li>Micropolis</li>
@@ -99,7 +109,7 @@
                                     <p>".$row['Pers1']."</p>
                                     <p>".$row['Pers2']."</p>
 
-                                    <div class='viewLink'>test</div>
+                                    <div class='viewLink'><a href='index.php?pagina=getGame&planned_name=$name'>View</a></div>
                                 </div>";
 
                                 echo "<br>";
@@ -107,6 +117,17 @@
                         }
                     }
                 ?>
+
+                <!-- <div>
+                    <form>
+                        <input type="submit" onclick="clearList()" value="Clear List">
+                        <?php
+                            function clearList () {
+
+                            }
+                        ?>
+                    </form>
+                </div> -->
             </div>
         </section>
 

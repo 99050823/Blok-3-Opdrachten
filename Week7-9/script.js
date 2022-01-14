@@ -21,8 +21,6 @@ function plannedGames () {
     buttons[0].style.display = "none";
     planForm.style.display = "none";
     games.style.display = "none";
-
-    clickOnGame()
 }
 
 function gamesList () {
@@ -30,18 +28,6 @@ function gamesList () {
     planForm.style.display = "none";
     games.style.display = "block";
     planned.style.display = "none";
-}
-
-function clickOnGame () {
-
-    var viewLink = planned.querySelectorAll("div.viewLink");
-
-    for (let i = 0; i < viewLink.length; i++) {
-        
-        viewLink[i].addEventListener("click", () => {
-            alert("test");
-        })
-    }
 }
 
 if (window.history.replaceState) {

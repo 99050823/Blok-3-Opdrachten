@@ -47,11 +47,11 @@ button {
     height: 50px;
 }
 
-form {
+.planForm {
     display: none;
 }
 
-input {
+.planForm input {
     width: 650px;
     text-align: center;
 }

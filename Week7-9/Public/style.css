@@ -8,12 +8,9 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.container {
-    background-color: white;
-    width: 700px;
-    text-align: center;
-    margin-top: 20px;
-    font-size: large;
+section {
+    padding: 80px 0 80px 0;
+    background-color: slategray;
 }
 
 h2 {
@@ -22,56 +19,28 @@ h2 {
     color: white;
 }
 
-.navList {
-    list-style: none;
-    padding: 10px 0 10px 0;
-}
-
-.navList li{
-    display: inline;
-    margin-right: 50px;
-    margin-left: 80px;
-}
-
-section {
-    padding: 80px 0 80px 0;
-    background-color: slategray;
-}
-
 footer {
     padding: 30px 0 30px 0;
 }
 
-button {
-    width: 125px;
-    height: 50px;
-}
-
-.planForm {
-    display: none;
-}
-
-.planForm input {
-    width: 650px;
+.container {
+    background-color: white;
+    width: 700px;
     text-align: center;
+    margin-top: 20px;
+    font-size: large;
 }
 
-.time {
-    width: 200px;
-    margin-right: 40px;
-}
-
-.gamesList {
-    display: none;
-}
-
-.gamesList ul {
+ul {
     list-style: none;
 }
 
-.planned {
-    display: none;
+.navlist li {
+    display: inline;
+    margin: 0 40px 0 40px;
 }
+
+a {text-decoration: none;}
 
 .planned h2 {
     margin: 0 100px 0 100px;
@@ -97,4 +66,9 @@ button {
 
 .plannedGame:hover {
     background-color: white;
+}
+
+.planForm input {
+    width: 650px;
+    text-align: center;
 }

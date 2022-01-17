@@ -9,7 +9,7 @@
         $sqlQuery3 = "INSERT INTO planned (Name, Time, Pers1, Pers2) VALUES ('".$game."','".$time."','".$pers1."','".$pers2."')";
 
         if ($conn->query($sqlQuery3) === TRUE) {
-            echo "Record created";
+            echo "<script>console.log('records created')</script>";
         } else {
             echo "ERROR";
         }

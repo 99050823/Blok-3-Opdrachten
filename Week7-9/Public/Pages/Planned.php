@@ -13,21 +13,29 @@
 
         while($row = mysqli_fetch_array($result1)) {
 
-            
-            $textQuery = "SELECT description FROM games WHERE name=$name";
+            $name = $row['Name'];
 
             echo "<div class='plannedGame'>
-                <h3>".$row['Name']."</h3>
-                <p>".$row['Time']."</p>
-                <p>".$row['Pers1']."</p>
-                <p>".$row['Pers2']."</p>
+                <h3>".$name."</h3>
+                <p>".$row['Start']."</p>
+                <p>".$row['Start']."</p>
+                <p>".$row['Leader']."</p>
 
-                <a href='PHP/getData.php?name=$name&text=$text'>View</a>
+                <a href='./Pages/gameInfo.php?name=$name'>View</a>
             </div>";
 
             echo '<br>';
         }
-    }
-    
 
+        echo "<form action='' method='POST'>
+            <input id='clear' type='submit' value='Clear List' name='clear'>
+        </form>";
+    }
+
+    $clearBttn = $_POST['clear'];
+
+    if ($clearBttn) {
+        $clearQuery = "DELETE FROM planned";
+        $clearResult = mysqli_query($conn, $clearQuery);
+    }
 ?>

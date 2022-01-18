@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php $conn = mysqli_connect('localhost', 'admin', '', 'testing_games'); ?>
+<?php require 'PHP/Connect.php'?>
 <?php include 'PHP/sendData.php';?>
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
             <ul class="navlist">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="index.php?pagina=Games">Games</a></li>
-                <li><a href="index.php?pagina=Planned">Planned Games</a></li>
+                <li><a id="plannedEl" href="index.php?pagina=Planned">Planned Games</a></li>
             </ul>
         </header>
 
@@ -46,11 +46,11 @@
                         <input class='time 'name='time' type='time'>
                         <br>
                         <br>
-                        <label for='pers1'>Person 1 : </label>
-                        <input name='pers1' type='text'>
+                        <label for='leader'>Leader : </label>
+                        <input name='leader' type='text'>
         
-                        <label for='pers2'>Person 2 : </label>
-                        <input name='pers2' type='text'>
+                        <label for='player'>Players :  </label>
+                        <input name='player' type='text'>
                         <br>
                         <br>
                         <input type='submit' value='Submit' name='submit'>

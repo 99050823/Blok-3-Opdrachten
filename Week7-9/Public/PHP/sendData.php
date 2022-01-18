@@ -1,17 +1,17 @@
 <?php 
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $game = $_POST['game'];
-        $time = $_POST['time'];
-        $pers1 = $_POST['pers1'];
-        $pers2 = $_POST['pers2'];
+    $submitBttn = $_POST['submit'];
 
-        $sqlQuery3 = "INSERT INTO planned (Name, Time, Pers1, Pers2) VALUES ('".$game."','".$time."','".$pers1."','".$pers2."')";
+    if ($submitBttn) {
+        $name = $_POST['game'];
+        $start = $_POST['time'];
+        $lead = $_POST['leader'];
+        $play = $_POST['player'];
 
-        if ($conn->query($sqlQuery3) === TRUE) {
+        $sendQuery = "INSERT INTO planned (Name, Start, Leader, Players) VALUES ('".$name."', '".$start."', '".$lead."', '".$play."')";
+        
+        if ($conn->query($sendQuery) === TRUE) {
             echo "<script>console.log('records created')</script>";
-        } else {
-            echo "ERROR";
         }
     }
 

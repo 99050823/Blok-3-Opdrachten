@@ -3,7 +3,7 @@
     //New user in phpmyadmin
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "root";
     $database = "testing_games";
 
     $conn = new mysqli($servername, $username, $password, $database);

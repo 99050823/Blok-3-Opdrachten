@@ -14,7 +14,10 @@
         while($row = mysqli_fetch_array($getPlannedResult)) {
                 
             echo "<div class='plannedGame'>
-                <h3>".$row['name']."</h3>
+                <div>
+                    <a id='delete' href='PHP/delete.php?varname=".$row['gameID']."'><i class='fas fa-trash'></i></a>
+                    <h3>".$row['name']."</h3>
+                </div>
 
                 <ul>
                     <li>Start Time : ".$row['start']."</li>

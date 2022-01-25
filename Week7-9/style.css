@@ -1,11 +1,16 @@
 body {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to right ,rgb(0, 255, 200), rgb(98, 98, 248));
+    background-color: gray;
     margin: 0;
     padding: 0;
 
     font-family: 'Josefin Sans', sans-serif;
+}
+
+img {
+    width: 220px;
+    height: 220px;
 }
 
 section {
@@ -93,4 +98,24 @@ form input {
     width: 400px;
     text-align:center;
     margin-bottom: 15px;
+}
+
+#delete {
+    position: relative;
+    left: 120px;
+}
+
+.view-grid {
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: 400px 400px;
+}
+
+.view-grid p, img {
+    margin-top: 30px;
+}
+
+.planned-details p{
+    text-align: left;
+    margin-left: 10px;
 }

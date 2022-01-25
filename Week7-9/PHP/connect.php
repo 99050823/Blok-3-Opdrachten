@@ -1,7 +1,17 @@
 <?php
 
-    $conn = mysqli_connect('localhost', 'admin', '', 'testing_games');
-    if (!$conn) {
-        echo "No connection established with the database : ERROR";
-    }   
+    //New user in phpmyadmin
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "testing_games";
+
+    $conn = new mysqli($servername, $username, $password, $database);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } else { 
+        echo "<script>console.log('Connected successfully')</script>";
+    }
+
 ?>

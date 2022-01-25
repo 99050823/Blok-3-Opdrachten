@@ -11,14 +11,14 @@
 
     <?php
 
-        $tempConn = mysqli_connect('localhost', 'admin', '', 'testing_games');
+        require '../PHP/connect.php';
 
-        if (!$tempConn) {
-            echo "ERROR: No connection with the database!";
+        if (!$conn) {
+            echo 'Connection failed: ' . $conn->connect_error;
         } else {
 
             $recordQuery = "SELECT * FROM planned WHERE gameID='".$_GET['varname']."'";
-            $recordResult = mysqli_query($tempConn, $recordQuery);
+            $recordResult = mysqli_query($conn, $recordQuery);
 
             if ($row = mysqli_fetch_object($recordResult)) {
                 echo "<div class='main-div'>
@@ -43,7 +43,7 @@
                 <select name='name'>";
 
                 $sqlQuery1 = "SELECT * FROM games";
-                $result1 = mysqli_query($tempConn, $sqlQuery1);
+                $result1 = mysqli_query($conn, $sqlQuery1);
     
                 while ($row = mysqli_fetch_array($result1)) {
                     echo "<option>".$row['gameName']."</option>";
@@ -73,7 +73,7 @@
     
                 $editQuery = "UPDATE planned SET name='$name', start='$start', lead='$lead', players='$players' WHERE gameID='".$_GET['varname']."'";
 
-                if ($tempConn->query($editQuery) === TRUE) {
+                if ($conn->query($editQuery) === TRUE) {
                     echo "<script>console.log('Record changed');</script>";
                 } else {
                     echo "ERROR";
@@ -81,8 +81,6 @@
             }
 
         }
-
-        mysqli_close($tempConn);
     ?>
 
     <script src="../script.js"></script>

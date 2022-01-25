@@ -12,17 +12,20 @@
     } else {
 
         while($row = mysqli_fetch_array($getPlannedResult)) {
-
-            $name = $row['name'];
                 
             echo "<div class='plannedGame'>
-                <h3>$name</h3>
+                <h3>".$row['name']."</h3>
 
                 <ul>
                     <li>Start Time : ".$row['start']."</li>
                     <li>Duration : ".$row['play_minutes']." Minutes</li>
                     <li>Leader : ".$row['lead']."</li>
                 </ul>
+
+                <div>
+                    <a href='Pages/edit.php?varname=".$row['gameID']."'>Edit</a>
+                    <a href='Pages/view.php?varname=".$row['name']."&varid=".$row['gameID']."'>View</a>
+                </div>
             </div>";   
 
             echo '<br>';

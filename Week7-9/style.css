@@ -47,7 +47,12 @@ ul {
 
 a {text-decoration: none;}
 
-.planned h2 {
+.planned {
+    height: 450px;
+    overflow-y: auto;
+}
+
+.planned-title {
     margin: 0 100px 0 100px;
     background-color: wheat;
     color: black;
@@ -115,7 +120,11 @@ form input {
     margin-top: 30px;
 }
 
-.planned-details p{
+.view-grid ul li{
     text-align: left;
-    margin-left: 10px;
+    margin-left: 100px;
+}
+
+.view-grid iframe {
+    margin: 30px 0 30px 120px;
 }

@@ -18,7 +18,7 @@
                 
             echo "<div class='plannedGame'>
                 <div>
-                    <a id='delete' href='PHP/delete.php?varname=".$row['gameID']."'><i class='fas fa-trash'></i></a>
+                    <a id='delete'><i class='fas fa-trash'></i></a>
                     <h3>".$row['name']."</h3>
                 </div>
 

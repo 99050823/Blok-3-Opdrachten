@@ -84,7 +84,7 @@ a {text-decoration: none;}
 }
 
 .main-div {
-    background-color: gray;
+    background-color: cadetblue;
     width: 800px;
     text-align: center;
     border-radius: 10px;
@@ -105,7 +105,7 @@ form input {
     margin-bottom: 15px;
 }
 
-#delete {
+.delete {
     position: relative;
     left: 120px;
 }
@@ -127,4 +127,9 @@ form input {
 
 .view-grid iframe {
     margin: 30px 0 30px 120px;
+}
+
+.view-div a{
+    font-size: larger;
+    margin-bottom: 20px;
 }

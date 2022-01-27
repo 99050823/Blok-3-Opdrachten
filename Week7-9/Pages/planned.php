@@ -18,7 +18,7 @@
                 
             echo "<div class='plannedGame'>
                 <div>
-                    <a id='delete'><i class='fas fa-trash'></i></a>
+                    <a class='delete'><i class='fas fa-trash'></i></a>
                     <h3>".$row['name']."</h3>
                 </div>
 
@@ -33,6 +33,27 @@
                     <a href='Pages/view.php?varname=".$row['name']."&varid=".$row['gameID']."'>View</a>
                 </div>
             </div>";   
+
+            echo "<script>
+                var deleteBttns = document.querySelectorAll('.delete');
+
+                for (let i = 0; i < deleteBttns.length; i++) {
+                    deleteBttns[i].addEventListener('click', () => {
+                        deleteFunc();
+                    })
+                }
+
+                function deleteFunc () {
+                    const message = 'Would you like to delete this record?';
+                    var conf = confirm(message);
+                
+                    if (conf==true) {
+                        window.location.replace('PHP/delete.php?varname=".$row['gameID']."');
+                    } else { 
+                        alert('Selected game not deleted.'); 
+                    }
+                }
+            </script>";
 
             echo '<br>';
         }

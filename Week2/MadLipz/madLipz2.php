@@ -23,7 +23,7 @@
         </header>
 
         <section>
-            <form action="Validation2.php" method="post"> 
+            <form method="post"> 
                 <label for="antwoord1">Welk dier zou je als huisdier willen?</label>           
                 <input type="text" name="antwoord1">
 
@@ -58,8 +58,6 @@
 
         <footer>Gemaakt door : Luuk van Wijgerden</footer>
     </div>
-
-    <script src="madLipz.js"></script>
 
 </body>
 </html>

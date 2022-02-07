@@ -56,7 +56,5 @@
         <footer>Gemaakt door : Luuk van Wijgerden</footer>
     </div>
 
-    <script src="script.js"></script>
-
 </body>
 </html>

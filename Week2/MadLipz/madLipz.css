@@ -1,84 +1,74 @@
 body {
-    background-color: gray;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    background-color: white;
-    display: grid;
-    grid-template-columns:400px 400px;
     width: 800px;
-    margin: 2cm 0 0 11.5cm;
-    padding-bottom: 10px;
+    background-color: gray;
 }
 
-.nav {
+header {
+    margin-top: -20px;
     background-color: red;
-    grid-column: 1/3;
-}
-
-.nav p a {
     color: white;
 }
 
-.nav p {
-    display: inline-block;
+header h2 { 
     margin-left: 30px;
 }
 
-h2 {
-    display: inline-block;
-    margin-left: 12cm;
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 30px;
+    margin-left: -9px;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 20px;
+}
+
+form input[type=submit] {
+    width: 25%;
+}
+
+footer {
+    text-align: center;
+    background-color: red;
     color: white;
 }
 
-.tekstContainer {
-    grid-column: 1/2;
-    margin-left: 3cm;
-}
-
-.inputContainer {
-    width: 200px;
-    position: relative;
-    left: 75px;
-    margin-top: 6px;
-}
-
-.inputContainer form input{
-    margin-top: 12px;
-}
-
-.inputContainer2 {
-    width: 200px;
-    position: relative;
-    left: 75px;
-    margin-top: 2px;
-}
-
-.inputContainer2 form input{
-    margin-top: 19px;
-}
-
-#output {
-    left: 5cm;
-    margin-top: 50px;
-    position: relative;
+.output {
     text-align: center;
+    margin: 0 50px 0 50px;
 }
 
 span {
     background-color: black;
     color: yellow;
 }
-
-.footer {
-    text-align: center;
-    background-color: red;
-    width: 800px;
-    position: relative;
-    left: 11.5cm;
-    color: white;
-    padding-top: 0.3cm;
-    padding-bottom: 0.3cm;
-}
-
-

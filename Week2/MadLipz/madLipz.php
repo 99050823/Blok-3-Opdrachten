@@ -11,62 +11,52 @@
     
     <div class="container">
 
-        <div class="nav">
-            <p><a href="madLipz.php">Onkunde</a></p>
-            <p><a href="madLipz2.php">Paniek</a></p>
-
+        <header>
             <h2>Onkunde</h2>
-        </div>
-        
-        <div class="tekstContainer">
-            <p>Wat zou je willen leren?</p>
-            <p>Met wie kun je goed opschieten?</p>
-            <p>Wat is je favoriete getal?</p>
-            <p>Wat heb je bij je als je op vakantie gaat?</p>
-            <p>Wat is je beste eigenschap?</p>
-            <p>Wat is je slechtste eigenschap?</p>
-            <p>Wat is het ergste dat je kan overkomen?</p>
-        </div>
 
-        <div class="inputContainer">
-            <form action="madLipz.php" method="post">            
+            <nav>
+                <ul>
+                    <li><a href="madLipz.php">Onkunde</a></li>
+                    <li><a href="madLipz2.php">Paniek</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <form method="post"> 
+                <label for="antwoord1">Wat zou je willen leren?</label>           
                 <input type="text" name="antwoord1">
+
+                <label for="antwoord2">Met wie kun je goed opschieten?</label>
                 <input type="text" name="antwoord2">
+                
+                <label for="antwoord3">Wat is je favoriete getal?</label>
                 <input type="text" name="antwoord3">
+                
+                <label for="antwoord4">Wat heb je bij je als je op vakantie gaat?</label>
                 <input type="text" name="antwoord4">
+                
+                <label for="antwoord5">Wat is je beste eigenschap?</label>
                 <input type="text" name="antwoord5">
+                
+                <label for="antwoord6">Wat is je slechtste eigenschap?</label>
                 <input type="text" name="antwoord6">
+                
+                <label for="antwoord7">Wat is het ergste dat je kan overkomen?</label>
                 <input type="text" name="antwoord7">
 
                 <input type="submit" name="subButton1" value="Submit">
             </form>
+        </section>
+
+        <div class="output">
+            <?php include 'Validation.php'?>
         </div>
 
-        <?php
-
-            $answer1 = $_POST['antwoord1'];
-            $answer2 = $_POST['antwoord2'];
-            $answer3 = $_POST['antwoord3'];
-            $answer4 = $_POST['antwoord4'];
-            $answer5 = $_POST['antwoord5'];
-            $answer6 = $_POST['antwoord6'];
-            $answer7 = $_POST['antwoord7'];
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-                echo $tekst = "<div id='output'>Er zijn veel mensen die niet kunnen <span>$answer1</span>.<br><br> Neem nou <span>$answer2</span>. Zelfs met de hulp van een <span>$answer4</span> of zelfs <span>$answer3</span> kan <span>$answer2</span> niet <span>$answer1</span>.
-                <br><br> Dat heeft niet te maken met een gebrek aan <span>$answer5</span>, maar met een te veel aan <span>$answer6</span>.<br><br>
-                Te veel <span>$answer6</span> kan leiden tot <span>$answer7</span> en dat is niet goed als je wilt <span>$answer1</span>. Helaas voor <span>$answer2</span>.</div>";
-            }
-
-        ?>
-
-
+        <footer>Gemaakt door : Luuk van Wijgerden</footer>
     </div>
 
-    <div class="footer"><footer>Gemaakt door : Luuk van Wijgerden</footer></div>
-
-    <script src="madLipz.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -13,7 +13,7 @@
         $answ7 = $_POST['antwoord7'];
 
         echo "<p>
-            Er zijn veel mensen die niet kunnen <span>".$answ1.".</span> Neem nu bijvoorbeeld <span>".$answ2."</span>. Zelfs
+            Er zijn veel mensen die niet kunnen <span>".$answ1."</span> Neem nu bijvoorbeeld <span>".$answ2."</span>. Zelfs
             met de hulp van een <span>".$answ3."</span> of zelf <span>".$answ4."</span> kan <span>".$answ2."</span> niet <span>".$answ1."</span>. Dat
             heeft niet te maken met een gebrek aan <span>".$answ5."</span>. Maar met teveel <span>".$answ6."</span>. Teveel
             <span>".$answ6."</span> leidt tot <span>".$answ7."</span> en dat is niet goed als je wilt <span>".$answ1."</span>. Helaas voor
